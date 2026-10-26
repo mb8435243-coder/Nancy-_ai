@@ -21,9 +21,9 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y git zip unzip openjdk-17-jdk python3-pip autoconf libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev libtinfo5 cmake libffi-dev libssl-dev
-        pip install --upgrade buildozer cython kivy
+        pip install --upgrade "pip<24.1" "setuptools<69" Cython==0.29.33 buildozer
 
-    - name: Accept Android SDK Licenses & Build
+    - name: Build with Buildozer
       run: |
         mkdir -p ~/.android
         touch ~/.android/repositories.cfg
@@ -33,5 +33,5 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: Nancy-AI-APK
-        path: bin/*.apkl
+        path: bin/*.apk
         
