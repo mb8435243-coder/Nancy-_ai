@@ -1,0 +1,19 @@
+[app]
+title = Nancy AI
+package.name = nancyai
+package.domain = com.babu.nancyai
+source.dir = .
+source.include_exts = py,png,jpg,kv,atlas,ttf
+version = 1.0.0
+requirements = python3,kivy,reportlab
+icon.filename = %(source.dir)s/logo.png
+orientation = portrait
+fullscreen = 1
+android.permissions = CAMERA, RECORD_AUDIO, INTERNET, WRITE_EXTERNAL_STORAGE, READ_EXTERNAL_STORAGE, SYSTEM_ALERT_WINDOW
+android.api = 33
+android.minapi = 21
+android.ndk = 25b
+
+[buildozer]
+log_level = 2
+warn_on_root = 1
